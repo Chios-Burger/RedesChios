@@ -1,0 +1,86 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background-color: #fdeadf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+h1 {
+    color: #133662;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    color: #133662;
+    font-size: 0.75em;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilos de los botones */
+.button-container {
+    position: relative;
+    width: 350px;
+    height: 50px;
+    margin: 10px auto;
+    overflow: hidden;
+    border: 1px solid #d3343c;
+    font-weight: 300;
+    transition: 0.5s;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-container a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    background: #d3343c;
+    cursor: pointer;
+}
+
+/* Texto flotante dentro del botón */
+.mas {
+    position: absolute;
+    color: #d3343c;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 20px;
+}
