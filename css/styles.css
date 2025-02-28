@@ -43,7 +43,7 @@ ul {
     padding: 0;
 }
 
-/* Estilos de los botones */
+/* Estilos de los botones con CSS Mask */
 .button-container {
     position: relative;
     width: 350px;
@@ -72,6 +72,20 @@ ul {
     text-decoration: none;
     background: #d3343c;
     cursor: pointer;
+
+    /* Aplicando la máscara MASK2 */
+    -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
+    mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
+    -webkit-mask-size: 3000% 100%;
+    mask-size: 3000% 100%;
+    -webkit-animation: ani2 0.7s steps(29) forwards;
+    animation: ani2 0.7s steps(29) forwards;
+}
+
+/* Efecto de hover */
+.button-container a:hover {
+    -webkit-animation: ani 0.7s steps(29) forwards;
+    animation: ani 0.7s steps(29) forwards;
 }
 
 /* Texto flotante dentro del botón */
@@ -83,4 +97,25 @@ ul {
     font-size: 14px;
     font-weight: bold;
     margin-top: 20px;
+}
+
+/* Animaciones */
+@-webkit-keyframes ani {
+    from { -webkit-mask-position: 0 0; mask-position: 0 0; }
+    to { -webkit-mask-position: 100% 0; mask-position: 100% 0; }
+}
+
+@keyframes ani {
+    from { -webkit-mask-position: 0 0; mask-position: 0 0; }
+    to { -webkit-mask-position: 100% 0; mask-position: 100% 0; }
+}
+
+@-webkit-keyframes ani2 {
+    from { -webkit-mask-position: 100% 0; mask-position: 100% 0; }
+    to { -webkit-mask-position: 0 0; mask-position: 0 0; }
+}
+
+@keyframes ani2 {
+    from { -webkit-mask-position: 100% 0; mask-position: 100% 0; }
+    to { -webkit-mask-position: 0 0; mask-position: 0 0; }
 }
